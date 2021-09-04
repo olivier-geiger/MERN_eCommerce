@@ -1,4 +1,5 @@
 import React from 'react';
+import { LinkContainer } from 'react-router-bootstrap';
 import {
   Navbar,
   Nav,
@@ -13,8 +14,10 @@ const Navigation = () => {
   return (
     <Container>
       <Navbar bg='light' expand='lg' collapseOnSelect>
-        <Navbar.Brand href='#' className='mx-5'>
-          eCommerce
+        <Navbar.Brand>
+          <LinkContainer to='/' className='mx-5 text-dark'>
+            <Nav.Link>eCommerce</Nav.Link>
+          </LinkContainer>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='navbarScroll' />
         <Navbar.Collapse id='navbarScroll'>
@@ -23,15 +26,35 @@ const Navigation = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href='#action1'>Home</Nav.Link>
-            <Nav.Link href='#action2'>Articles</Nav.Link>
-            <Nav.Link href='#action2'>Contact</Nav.Link>
+            <LinkContainer to='/'>
+              <Nav.Link>Home</Nav.Link>
+            </LinkContainer>
+
+            <LinkContainer to='/articles'>
+              <Nav.Link>Articles</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to='/contact'>
+              <Nav.Link>Contact</Nav.Link>
+            </LinkContainer>
+
             <NavDropdown title='Connexion' id='navbarScrollingDropdown'>
               <NavDropdown.Item href='#action3'>
-                <i class='fas fa-sign-in-alt px-2'>Se connecter</i>
+                <LinkContainer to='/signin'>
+                  <Nav.Link>
+                    <i class='fas fa-sign-in-alt px-2'>
+                      <span>Se connecter</span>
+                    </i>
+                  </Nav.Link>
+                </LinkContainer>
               </NavDropdown.Item>
               <NavDropdown.Item href='#action4'>
-                <i class='fas fa-sign-out-alt mx-2'>Se déconnecter</i>
+                <LinkContainer to='/signup'>
+                  <Nav.Link>
+                    <i class='fas fa-sign-out-alt mx-2'>
+                      <span>Se déconnecter</span>
+                    </i>
+                  </Nav.Link>
+                </LinkContainer>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

@@ -5,8 +5,12 @@ import styled from 'styled-components';
 
 // Styled Components
 const Div = styled.div`
-  width: 20%;
+  max-width: 50%;
+  min-height: 70vh;
   margin: 5rem auto;
+  background-color: #d3e0ea;
+  padding: 2rem;
+  border-radius: 7px;
 `;
 
 const Text = styled.h2`
@@ -16,10 +20,6 @@ const Text = styled.h2`
 
 const Content = styled.div`
   text-align: center;
-`;
-
-const ContentRight = styled.div`
-  text-align: right;
 `;
 
 const SignUp = () => {
@@ -70,12 +70,10 @@ const SignUp = () => {
             S'inscrire
           </Button>
           <br />
-        </Content>
-        <ContentRight>
           <Form.Text>
             déjà <a href='#'>inscrit?</a>
           </Form.Text>
-        </ContentRight>
+        </Content>
       </form>
     </Div>
   );

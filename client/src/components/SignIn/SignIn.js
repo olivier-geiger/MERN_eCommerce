@@ -1,12 +1,16 @@
 // Librairies
 import React from 'react';
-import { Form, Container, Button, Row } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 
 // Styled Components
 const Div = styled.div`
-  width: 20%;
+  max-width: 50%;
+  min-height: 50vh;
   margin: 5rem auto;
+  background-color: #d3e0ea;
+  padding: 2rem;
+  border-radius: 7px;
 `;
 
 const Text = styled.h2`
@@ -18,11 +22,7 @@ const Content = styled.div`
   text-align: center;
 `;
 
-const ContentRight = styled.div`
-  text-align: right;
-`;
-
-const Login = () => {
+const SignIn = () => {
   return (
     <Div>
       <form>
@@ -59,15 +59,13 @@ const Login = () => {
             Se connecter
           </Button>
           <br />
-        </Content>
-        <ContentRight>
           <Form.Text>
             Mot de passe <a href='#'>oublié?</a>
           </Form.Text>
-        </ContentRight>
+        </Content>
       </form>
     </Div>
   );
 };
 
-export default Login;
+export default SignIn;
