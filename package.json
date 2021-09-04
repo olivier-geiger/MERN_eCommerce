@@ -1,0 +1,29 @@
+{
+  "name": "mern_ecommerce",
+  "version": "1.0.0",
+  "description": "eCommerce",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "concurrently": "^6.2.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olivier-geiger/MERN_eCommerce.git"
+  },
+  "author": "developeroliver",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olivier-geiger/MERN_eCommerce/issues"
+  },
+  "homepage": "https://github.com/olivier-geiger/MERN_eCommerce#readme"
+}
