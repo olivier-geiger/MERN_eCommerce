@@ -1,21 +1,13 @@
 // Librairies
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Col, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+
+// Components
 import Rating from '../Rating/Rating';
 
 const Product = ({ product }) => {
   return (
-    // <>
-    //   <Col key={product.name} md={3} xs={4} className='m-5 card p-3'>
-    //     <NavLink to={`/product/${product._id}`} className='m-1 text-dark'>
-    //       <img src={product.image} alt={product.name} className='img-fluid' />
-    //       <h1>{product.name}</h1>
-    //       <Rating value={product.rating} />
-    //       <h2>Prix : {product.price} €</h2>
-    //     </NavLink>
-    //   </Col>
-    //</>
     <Card className='my-3 p-3 rounded'>
       <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image} variant='top' />

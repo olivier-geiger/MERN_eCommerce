@@ -1,6 +1,9 @@
+// Librairies
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Button, Row, Col } from 'react-bootstrap';
+
+// Components
 import FormContainer from '../../components/FormContainer/FormContainer';
 
 const LoginScreen = () => {
@@ -22,14 +25,17 @@ const LoginScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Button type='submit' variant='primary' className='my-3'>
+        <Button type='submit' variant='primary' className='my-3 rounded'>
           Se connecter
         </Button>
       </Form>
 
       <Row className='py-3'>
         <Col>
-          Nouveau utilisateur? <a href=''>S'enregistrer</a>
+          Nouveau utilisateur?{' '}
+          <Link to='/register' className='text-info'>
+            S'enregistrer
+          </Link>
         </Col>
       </Row>
     </FormContainer>

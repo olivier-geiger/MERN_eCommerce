@@ -9,20 +9,37 @@
   max-width: 120rem;
   margin: 0 auto;
 }
-
-/* homescreen */
 h1 {
-  font-size: 1.125rem !important;
-  text-align: left !important;
-  text-decoration: none !important;
+  font-size: 1.8 rem !important;
+  padding: 1rem 0;
 }
 h2 {
-  font-size: 0.875rem !important;
-  text-align: left !important;
+  font-size: 1rem !important;
+  padding: 0.5rem 0;
 }
-.img-fluid {
-  height: 6.25rem;
+h3 {
+  font-size: 0.9rem !important;
+  padding: 1rem 0;
 }
-.big-img {
-  height: 25rem !important;
+span {
+  margin: 0 0.7rem;
+}
+.filter {
+  width: 80%;
+  margin: 2rem auto;
+}
+.content {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+.title {
+  font-size: 0.7rem;
+}
+.title-site {
+  font-style: italic;
+  letter-spacing: 0.5rem;
+}
+.yellow {
+  color: yellow;
+  font-size: 2rem;
 }

@@ -1,6 +1,6 @@
+// Librairies
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-
+import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 const Header = () => {
@@ -8,17 +8,28 @@ const Header = () => {
     <header>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
         <Container>
-          <Navbar.Brand>Node e-commerce</Navbar.Brand>
-
+          <LinkContainer to='/'>
+            <Navbar.Brand className='title-site'>
+              {' '}
+              Easy Shop <i class='fab fa-shopify yellow'></i>{' '}
+            </Navbar.Brand>
+          </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav' className='justify-content-end mx-2'>
             <Nav className='text-right'>
-              <Nav.Link href='/login' exact>
-                <i className='fas fa-user'></i> Se connecter
-              </Nav.Link>
-              <Nav.Link href='#'>
-                <i className='fas fa-shopping-cart'></i>
-              </Nav.Link>
+              <LinkContainer to='/cart'>
+                <Nav.Link>
+                  <i className='fas fa-shopping-cart'>
+                    <span>Panier</span>
+                  </i>
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/login'>
+                <Nav.Link>
+                  <i className='fas fa-user'></i>
+                  <span>Se connecter</span>
+                </Nav.Link>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>
