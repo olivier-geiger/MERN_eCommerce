@@ -18,6 +18,7 @@ const Productscreen = ({ history, match }) => {
   // State
   const [show, setShow] = useState(false);
   const [qty, setQty] = useState(1);
+
   // Redux
   const dispatch = useDispatch();
   const productDetails = useSelector(state => state.productDetails);

@@ -8,11 +8,13 @@ import Product from '../../components/Product/Product';
 import Message from '../../components/Message/Message';
 import Loader from '../../components/Loader/Loader';
 import Meta from '../../components/Meta/Meta';
+// import ProductCarousel from '../../components/ProductCarousel/ProductCarousel';
 
 // Redux
 import { listPoducts } from '../../actions/productActions';
 
-const Homescreen = () => {
+const Homescreen = ({ match }) => {
+  const keyword = match.params.keyword;
   // Redux
   const dispatch = useDispatch();
   const productList = useSelector(state => state.productList);
@@ -20,11 +22,12 @@ const Homescreen = () => {
 
   // Lifecycles
   useEffect(() => {
-    dispatch(listPoducts());
-  }, [dispatch]);
+    dispatch(listPoducts(keyword));
+  }, [dispatch, keyword]);
 
   return (
     <>
+      {/* {!keyword && <ProductCarousel />} */}
       <Meta />
       <h1>Dernier produits</h1>
       {loading ? (

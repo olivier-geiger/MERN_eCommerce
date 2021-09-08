@@ -1,5 +1,5 @@
 // Librairies
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Row, Col, Form, Button, Container } from 'react-bootstrap';
 
@@ -8,6 +8,7 @@ import { Row, Col, Form, Button, Container } from 'react-bootstrap';
 
 const Filterscreen = ({ history }) => {
   // State
+  const [keyword, setKeyword] = useState('');
   const [searchkey, setSearchkey] = useState('');
   const [sort, setSort] = useState('popular');
   const [category, setCategory] = useState('all');
@@ -15,17 +16,32 @@ const Filterscreen = ({ history }) => {
   // Redux
   // const dispatch = useDispatch();
 
+  // Functions
+  const submitHandler = e => {
+    e.preventDefault();
+    if (keyword.trim()) {
+      history.push(`/search/${keyword}`);
+    } else {
+      history.push('/');
+    }
+    if (keyword.trim()) {
+      history.push(`/search/${category}`);
+    } else {
+      history.push('/');
+    }
+  };
+
   return (
     <Container>
-      <Form className='filter'>
+      <Form className='filter' onSubmit={submitHandler}>
         <Row>
           <Col md={4}>
             <Form.Control
               type='text'
-              placeholder='Rechercher un produit...'
               className='mr-sm-2 ml-sm-5 border'
-              value={searchkey}
-              onChange={e => setSearchkey(e.target.value)}
+              value={keyword}
+              placeholder='Rechercher un produit...'
+              onChange={e => setKeyword(e.target.value)}
             />
           </Col>
 

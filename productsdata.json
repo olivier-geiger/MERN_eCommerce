@@ -37,7 +37,7 @@
   },
   {
     "name": "Apple - 11\"' iPad Pro (2021) WIFI 128Go - Gris Sidéral",
-    "image": "images/ipadpro.jpeg",
+    "image": "/images/ipadpro.jpeg",
     "description": "L’expérience iPad ultime. Désormais avec la puce M1 et ses performances époustouflantes, un écran XDR qui laisse sans voix et une connectivité 5G fulgurante. Attachez vos ceintures.",
     "brand": "Apple",
     "category": "tablets",
@@ -61,7 +61,7 @@
   },
   {
     "name": "Apple iPhone 12 128Go, Bleu Pacifique ",
-    "image": "images/iphone12.jpeg",
+    "image": "/images/iphone12.jpeg",
     "description": "Une 5G en mode Pro. Une puce A14 Bionic qui distance nettement toutes les autres puces de smart­phone. Un système photo pro qui révolutionne la prise de vues en conditions de faible éclairage – de façon plus spectaculaire encore sur l’iPhone 12 Pro Max. Et le Ceramic Shield, qui multiplie par quatre la résistance aux chutes. La première impression est excellente. Attendez de voir la suite.",
     "brand": "Apple",
     "category": "mobiles",
@@ -109,7 +109,7 @@
   },
   {
     "name": "Apple - 11\"' iPad Pro (2021) WIFI 128Go - Gris Sidéral",
-    "image": "images/ipadpro.jpeg",
+    "image": "/images/ipadpro.jpeg",
     "description": "L’expérience iPad ultime. Désormais avec la puce M1 et ses performances époustouflantes, un écran XDR qui laisse sans voix et une connectivité 5G fulgurante. Attachez vos ceintures.",
     "brand": "Apple",
     "category": "tablets",
@@ -133,7 +133,7 @@
   },
   {
     "name": "Casque-Micro Sans-Fil PULSE 3D Blanc/White pour PS5 - Compatible PS4 - PlayStation Officiel",
-    "image": "images/casqueps5.jpeg",
+    "image": "/images/casqueps5.jpeg",
     "description": "Vivez une expérience fluide grâce au casque conçu spécialement pour offrir un son 3D sur les consoles PS5=. Le casque-micro sans fil PULSE 3D est équipé de deux microphones à réduction de bruit de fond, de la charge USB Type-C®, et d’un accès facilité aux commandes",
     "brand": "Sony",
     "category": "accessoires",

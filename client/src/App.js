@@ -12,7 +12,7 @@ import Footer from './components/Footer/Footer';
 import LoginScreen from './screens/Loginscreen/Loginscreen';
 import RegisterScreen from './screens/RegisterScreen/RegisterScreen';
 import Cartscreen from './screens/Cartscreen/Cartscreen';
-import Filterscreen from './screens/Filterscreen/Filterscreen';
+// import Filterscreen from './screens/Filterscreen/Filterscreen';
 
 // Styles
 import 'react-toastify/dist/ReactToastify.css';
@@ -21,16 +21,17 @@ function App() {
   return (
     <Router>
       <Header />
-      <Route render={({ history }) => <Filterscreen history={history} />} />
+      {/* <Route render={({ history }) => <Filterscreen history={history} />} /> */}
       <main className='py-3 bg-light'>
         <Container>
           <Switch>
             <Route path='/' exact component={Homescreen} />
+            <Route path='/login' component={LoginScreen} />
+            <Route path='/register' component={RegisterScreen} />
             <Route path='/product/:id' exact component={Productscreen} />
-            <Route path='/cart/:id' exact component={Cartscreen} />
-            <Route path='/login' exact component={LoginScreen} />
-            <Route path='/register' exact component={RegisterScreen} />
+            <Route path='/cart/:id?' exact component={Cartscreen} />
             <Route path='/search/:keyword' component={Homescreen} />
+            <Route path='/search/:category' component={Homescreen} />
           </Switch>
         </Container>
       </main>
